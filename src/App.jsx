@@ -1,9 +1,13 @@
+import { RouterProvider } from "react-router-dom";
+import "./index.css";
+import { router } from "./router/PremioRouter";
 
 function App() {
-
   return (
-    <h1>Hello World</h1>
-  )
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
-export default App
+export default App;
