@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --nav-color: #34b3f1;
-  font-family: "Josefin Sans";
+  @apply text-neutral-900;
+  @apply bg-[#F6F1F9];
+  font-family: "Afacad Flux";
 }

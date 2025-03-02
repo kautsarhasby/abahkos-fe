@@ -1,10 +1,12 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Jumbotrons from "../components/Jumbotrons";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="container mx-auto">
       <Navbar />
+      <Jumbotrons />
     </div>
   );
 };
