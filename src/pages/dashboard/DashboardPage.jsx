@@ -1,48 +1,35 @@
-import {
-  Gauge,
-  KeyRound,
-  LogOut,
-  PanelLeft,
-  Pencil,
-  Settings,
-  User,
-} from "lucide-react";
+import { BadgeDollarSign, MapPinHouse, Users } from "lucide-react";
 
 const DashboardPage = () => {
   return (
-    <main>
-      <aside className="h-screen w-80 border-r-2 border-black/20 bg-slate-100/50">
-        <section className="flex justify-between p-4">
-          <div className="relative flex h-12 w-12 flex-col items-center justify-center rounded-xl border-2 border-[#0e6a83]">
-            <User size={64} className="text-[#0e6a83]" />
-          </div>
-          <PanelLeft />
-        </section>
-        <section className="flex flex-col justify-center p-4">
-          <div className="flex items-center gap-2 text-xl">
-            <Gauge size={30} />
-            <p>Dashboard</p>
-          </div>
-          <div className="flex items-center gap-2 text-xl">
-            <KeyRound size={30} />
-            <p>Permissions</p>
-          </div>
-          <div className="flex items-center gap-2 text-xl">
-            <Pencil size={30} />
-            <p>Profile</p>
-          </div>
-          <div className="flex items-center gap-2 text-xl">
-            <Settings size={30} />
-            <p>Settings</p>
-          </div>
-          <div className="flex items-center gap-2 text-xl">
-            <LogOut size={30} />
-            <p>Log out</p>
-          </div>
-        </section>
-      </aside>
-      <div></div>
-    </main>
+    <section className="flex justify-between px-8 pt-8">
+      <div className="flex gap-4">
+        <div className="relative flex h-24 w-48 flex-col items-center justify-center rounded-xl border border-[#0e6a83] text-[#0e6a83]">
+          <MapPinHouse
+            className="absolute bottom-0 left-0 text-[#0e6a83]/50"
+            size={50}
+          />
+          <p className="text-3xl font-bold">20</p>
+          <span className="text-2xl">Boarder</span>
+        </div>
+        <div className="relative flex h-24 w-48 flex-col items-center justify-center rounded-xl border border-[#0e6a83] text-[#0e6a83]">
+          <Users
+            className="absolute bottom-0 left-0 text-[#0e6a83]/50"
+            size={50}
+          />
+          <p className="text-3xl font-bold">13</p>
+          <span className="text-2xl">Users</span>
+        </div>
+      </div>
+      <div className="relative flex h-24 w-96 flex-col rounded-xl border border-[#0e6a83] bg-gradient-to-t from-[#0e6a83]/50 to-white p-2 text-[#0e6a83]">
+        <BadgeDollarSign
+          className="absolute bottom-0 left-0 text-[#0e6a83]/50"
+          size={50}
+        />
+        <span className="text-2xl">Balance</span>
+        <span className="self-end text-3xl font-semibold">Rp. 90.230.412</span>
+      </div>
+    </section>
   );
 };
 
